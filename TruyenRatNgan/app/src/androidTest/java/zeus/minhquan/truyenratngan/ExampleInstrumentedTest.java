@@ -1,4 +1,4 @@
-package com.techkid.anh82.truyenratngan;
+package zeus.minhquan.truyenratngan;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -7,7 +7,7 @@ import android.support.test.runner.AndroidJUnit4;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 /**
  * Instrumentation test, which will execute on an Android device.
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("com.techkid.anh82.truyenratngan", appContext.getPackageName());
+        assertEquals("zeus.minhquan.truyenratngan", appContext.getPackageName());
     }
 }

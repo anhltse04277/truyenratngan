@@ -1,25 +1,38 @@
-package com.techkid.anh82.truyenratngan.databases.models;
+package zeus.minhquan.truyenratngan.databases.model;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.io.Serializable;
 
 /**
- * Created by anh82 on 4/18/2017.
+ * Created by AnhLT on 4/18/2017.
  */
 
-public class Story {
+public class Story implements Serializable {
+    private int id;
     private String image;
     private String title;
     private String description;
     private boolean isFavorite;
+    private int lastChapterNo;
 
+    public void setLastChapterNo(int lastChapterNo) {
+        this.lastChapterNo = lastChapterNo;
+    }
 
-
-    public Story(String image, String title, String description, boolean isFavorite) {
+    public Story(int id, String image, String title, String description, boolean isFavorite, int lastChapterNo) {
+        this.id = id;
         this.image = image;
         this.title = title;
         this.description = description;
         this.isFavorite = isFavorite;
+        this.lastChapterNo = lastChapterNo;
+    }
+
+    public int getLastChapterNo() {
+        return lastChapterNo;
+    }
+
+    public int getId() {
+        return id;
     }
 
     public String getImage() {
@@ -41,10 +54,12 @@ public class Story {
     @Override
     public String toString() {
         return "Story{" +
-                "image='" + image + '\'' +
+                "id=" + id +
+                ", image='" + image + '\'' +
                 ", title='" + title + '\'' +
                 ", description='" + description + '\'' +
                 ", isFavorite=" + isFavorite +
+                ", lastChapterNo=" + lastChapterNo +
                 '}';
     }
 }
