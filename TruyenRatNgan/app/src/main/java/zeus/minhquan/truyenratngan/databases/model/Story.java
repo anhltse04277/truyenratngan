@@ -50,7 +50,9 @@ public class Story implements Serializable {
     public boolean isFavorite() {
         return isFavorite;
     }
-
+    public void setFavorite(boolean b){
+        isFavorite = b;
+    }
     @Override
     public String toString() {
         return "Story{" +

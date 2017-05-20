@@ -119,4 +119,14 @@ public class StoryDatabase extends SQLiteAssetHelper {
         cursor.close();
         return story;
     }
+    public void updateFavourite(Story story, int isFavour) {
+        SQLiteDatabase db = getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+        contentValues.put(STORY_IS_FAVORITE, isFavour);
+        db.update("tbl_story",
+                contentValues,
+                "id = ?",
+                new String[]{((Integer)story.getId()).toString()});
+        db.close();
+    }
 }
