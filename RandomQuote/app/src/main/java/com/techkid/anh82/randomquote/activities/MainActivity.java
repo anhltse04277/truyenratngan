@@ -5,7 +5,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import com.techkid.anh82.randomquote.R;
-import com.techkid.anh82.randomquote.fragment.QuoteFragment;
+import com.techkid.anh82.randomquote.fragment.LoginFragment;
+
 
 public class MainActivity extends AppCompatActivity {
 
@@ -17,8 +18,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void displayStartScreen() {
-        QuoteFragment quoteFragment = new QuoteFragment();
-        changeFragment(quoteFragment, false);
+        changeFragment(new LoginFragment(), false);
     }
 
     public void changeFragment(Fragment fragment , boolean addToBacStack){

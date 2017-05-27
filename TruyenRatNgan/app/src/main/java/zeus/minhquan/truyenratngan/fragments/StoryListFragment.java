@@ -13,7 +13,7 @@ import java.util.List;
 
 import zeus.minhquan.truyenratngan.R;
 import zeus.minhquan.truyenratngan.StoryApplication;
-import zeus.minhquan.truyenratngan.StoryListActivity;
+import zeus.minhquan.truyenratngan.MainActivity;
 import zeus.minhquan.truyenratngan.adapter.StoryAdapter;
 import zeus.minhquan.truyenratngan.databases.StoryDatabase;
 import zeus.minhquan.truyenratngan.databases.model.Story;
@@ -22,12 +22,11 @@ import zeus.minhquan.truyenratngan.databases.model.Story;
 public class StoryListFragment extends Fragment {
 
     private List<Story> storyList;
-    private ArrayAdapter<Story> storyArrayAdapter;
     private ListView lvStory;
     private StoryAdapter storyAdapter;
 
     public StoryListFragment() {
-        // Required empty public constructor
+
     }
 
 
@@ -64,7 +63,7 @@ public class StoryListFragment extends Fragment {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 //TODO :CHANGE SCREEN
-                ((StoryListActivity)   getActivity()).changeScreen(new StoryDetailFragment().setStory(storyList.get(position)),true);
+                ((MainActivity)   getActivity()).changeScreen(new StoryDetailFragment().setStory(storyList.get(position)),true);
             }
         });
     }

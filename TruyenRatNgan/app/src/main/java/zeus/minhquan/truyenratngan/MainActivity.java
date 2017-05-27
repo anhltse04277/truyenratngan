@@ -8,9 +8,9 @@ import android.support.v7.app.AppCompatActivity;
 
 import zeus.minhquan.truyenratngan.fragments.StoryListFragment;
 
-public class StoryListActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity {
 
-    private final String TAG = "StoryListActivity";
+    private final String TAG = "MainActivity";
 
 
     @Override
@@ -26,7 +26,6 @@ public class StoryListActivity extends AppCompatActivity {
         // 2: create a transaction
         changeScreen(storyListFragment, false);
 
-
     }
 
     public void changeScreen(Fragment fragment , boolean addToBackStack){
@@ -36,7 +35,6 @@ public class StoryListActivity extends AppCompatActivity {
         if(addToBackStack){
             transaction.addToBackStack(null);
         }
-
         //3: Commit
         transaction.commit();
     }

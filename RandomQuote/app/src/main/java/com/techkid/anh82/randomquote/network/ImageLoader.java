@@ -70,7 +70,7 @@ public class ImageLoader extends AsyncTask<String,Void,Bitmap> {
         }
         try{
             urlString = urlString + IMAGE_WIDTH + "x" + IMAGE_HEIGHT;
-            Log.d("chieu rong la", IMAGE_WIDTH+"");
+
             URL url = new URL(urlString);
             //2Get Stream
             InputStream inputStream = url.openStream();
